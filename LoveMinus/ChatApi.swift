@@ -11,14 +11,12 @@ import Foundation
 class ChatApi {
     static func getMessage(message: String, completion: @escaping (ChatStruct) -> Swift.Void) {
 
-        let url =  "your api url"
+        let url =  URL(string: "https://chatbot-api.userlocal.jp/api/chat?message=\(message)&key=your_api_key".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
 
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-
             guard let jsonData = data else {
                 return
             }
-
             do {
                 let chat = try JSONDecoder().decode(ChatStruct.self, from: jsonData)
                 completion(chat)

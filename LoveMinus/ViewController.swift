@@ -42,9 +42,9 @@ class ViewController: UIViewController {
         speechRecognizer.delegate = self
         speechSynthesizer.delegate = self
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
@@ -133,11 +133,9 @@ class ViewController: UIViewController {
     }
     
     private func speak(message: String) {
-        
         defer {
             disableAVSession()
         }
-        
         do {
             try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
@@ -162,10 +160,15 @@ class ViewController: UIViewController {
 
 extension ViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        
-        guard let scene = SCNScene(named: "dog.scn", inDirectory: "art.scnassets/dog") else {fatalError()}
-        guard let catNode = scene.rootNode.childNode(withName: "Dog", recursively: true) else {fatalError()}
+        guard let planeAnchor = anchor as? ARPlaneAnchor else {
+            fatalError()
+        }
+        guard let scene = SCNScene(named: "dog.scn", inDirectory: "art.scnassets/dog") else {
+            fatalError()
+        }
+        guard let catNode = scene.rootNode.childNode(withName: "Dog", recursively: true) else {
+            fatalError()
+        }
         
         let magnification = 0.005
         catNode.scale = SCNVector3(magnification, magnification, magnification)
