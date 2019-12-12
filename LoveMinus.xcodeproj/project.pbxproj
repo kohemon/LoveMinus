@@ -14,6 +14,9 @@
 		55ECDFE6239FC0B100C2BDE7 /* LoveMinus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55ECDFE4239FC0B100C2BDE7 /* LoveMinus.xcdatamodeld */; };
 		55ECDFE8239FC0B500C2BDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55ECDFE7239FC0B500C2BDE7 /* Assets.xcassets */; };
 		55ECDFEB239FC0B500C2BDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ECDFE9239FC0B500C2BDE7 /* LaunchScreen.storyboard */; };
+		55ECE025239FCE3D00C2BDE7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 55ECE024239FCE3D00C2BDE7 /* art.scnassets */; };
+		55ECE02723A0D2B800C2BDE7 /* ChatApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ECE02623A0D2B800C2BDE7 /* ChatApi.swift */; };
+		55ECE02923A0D2E300C2BDE7 /* ChatStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ECE02823A0D2E300C2BDE7 /* ChatStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		55ECDFE7239FC0B500C2BDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55ECDFEA239FC0B500C2BDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55ECDFEC239FC0B500C2BDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55ECE024239FCE3D00C2BDE7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		55ECE02623A0D2B800C2BDE7 /* ChatApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApi.swift; sourceTree = "<group>"; };
+		55ECE02823A0D2E300C2BDE7 /* ChatStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,13 @@
 				55ECDFDD239FC0B100C2BDE7 /* SceneDelegate.swift */,
 				55ECDFDF239FC0B100C2BDE7 /* ViewController.swift */,
 				55ECDFE1239FC0B100C2BDE7 /* Main.storyboard */,
+				55ECE02623A0D2B800C2BDE7 /* ChatApi.swift */,
+				55ECE02823A0D2E300C2BDE7 /* ChatStruct.swift */,
 				55ECDFE7239FC0B500C2BDE7 /* Assets.xcassets */,
 				55ECDFE9239FC0B500C2BDE7 /* LaunchScreen.storyboard */,
 				55ECDFEC239FC0B500C2BDE7 /* Info.plist */,
 				55ECDFE4239FC0B100C2BDE7 /* LoveMinus.xcdatamodeld */,
+				55ECE024239FCE3D00C2BDE7 /* art.scnassets */,
 			);
 			path = LoveMinus;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 			files = (
 				55ECDFEB239FC0B500C2BDE7 /* LaunchScreen.storyboard in Resources */,
 				55ECDFE8239FC0B500C2BDE7 /* Assets.xcassets in Resources */,
+				55ECE025239FCE3D00C2BDE7 /* art.scnassets in Resources */,
 				55ECDFE3239FC0B100C2BDE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55ECE02923A0D2E300C2BDE7 /* ChatStruct.swift in Sources */,
 				55ECDFE6239FC0B100C2BDE7 /* LoveMinus.xcdatamodeld in Sources */,
+				55ECE02723A0D2B800C2BDE7 /* ChatApi.swift in Sources */,
 				55ECDFE0239FC0B100C2BDE7 /* ViewController.swift in Sources */,
 				55ECDFDC239FC0B100C2BDE7 /* AppDelegate.swift in Sources */,
 				55ECDFDE239FC0B100C2BDE7 /* SceneDelegate.swift in Sources */,
